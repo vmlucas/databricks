@@ -19,7 +19,6 @@ server = dbutils.secrets.get(scope="formula1-scope",key="mongo-server")
 #returns the Collection from the Home DB MongoDB Atlas
 def getHupeCollection():
     uri = "mongodb+srv://"+login+":"+pwd+"@"+server+"/?retryWrites=true&w=majority"
-    #uri = "mongodb://victor:fLhdeZmiMuflCIWI@victormongodb-shard-00-00-kvbw4.azure.mongodb.net:27017,victormongodb-shard-00-01-kvbw4.azure.mongodb.net:27017,victormongodb-shard-00-02-kvbw4.azure.mongodb.net:27017/HOME?ssl=false&replicaSet=VictorMongoDB-shard-0&authSource=admin&retryWrites=true&w=majority"
     client = MongoClient(uri)
     #db HOME CollectionSERIES
     db = client.get_database("Pacientes-SESRJ")
